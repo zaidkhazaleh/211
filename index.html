@@ -19,20 +19,42 @@
         }
 
         /* Body styling */
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            min-height: 100vh;
-            background-color: #170430;
-            color: #fff;
-            font-family: monospace;
-            font-weight: bold;
-            position: relative;
-            transform: translateY(-20px);
-            /* رفع المحتوى للأعلى */
+        ‏body {
+‏            display: flex;
+‏            justify-content: center;
+‏            align-items: center;
+‏            flex-direction: column;
+‏            min-height: 100vh;
+‏            background: linear-gradient(45deg, #ff6f61, #6b5b95);
+‏            background-size: 400% 400%;
+‏            color: #fff;
+‏            font-family: monospace;
+‏            font-weight: bold;
+‏            position: relative;
+‏            transform: translateY(-20px); /* رفع المحتوى للأعلى */
+‏            margin: 0;
+‏            overflow: hidden;
+‏            animation: gradientAnimation 12s ease infinite; /* تأثير تغيير الخلفية */
         }
+
+‏        @keyframes gradientAnimation {
+            0% {
+‏                background-position: 0% 50%;
+            }
+            25% {
+‏                background-position: 50% 100%;
+            }
+            50% {
+‏                background-position: 100% 50%;
+            }
+            75% {
+‏                background-position: 50% 0%;
+            }
+            100% {
+‏                background-position: 0% 50%;
+            }
+        }
+
 
         /* Terminal styling */
         .terminal {
