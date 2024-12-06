@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:image" content="https://enjoyteam.app/og-image.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:title" content="Enjoy with EnjoyTeam.app">
+    <link rel="icon" type="image/png" href="https://enjoyteam.app/og-image.png">
+    <title>Enjoy with &#10;EnjoyTeam.app</title>
+    <style>
+        /* Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body styling */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            min-height: 100vh;
+            background-color: #6564A5;
+            color: #fff;
+            font-family: monospace;
+            font-weight: bold;
+            position: relative;
+            transform: translateY(-20px); /* رفع المحتوى للأعلى */
+        }
+
+        /* Terminal styling */
+        .terminal {
+            background-color: #2b2b2b;
+            width: 90%;
+            max-width: 600px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            margin-top: 20px;
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            background-color: #3b3b3b;
+        }
+
+        .dot {
+            height: 12px;
+            width: 12px;
+            border-radius: 50%;
+            margin-right: 8px;
+        }
+
+        .red { background-color: #ff5f56; }
+        .yellow { background-color: #ffbd2e; }
+        .green { background-color: #27c93f; }
+
+        .content {
+            padding: 20px;
+            font-size: 1.1em;
+            white-space: pre-wrap;
+            line-height: 0.63;
+            font-weight: bold;
+        }
+
+        /* Custom Colors */
+        .enjoy { color: #73D58C; }
+        .colon { color: #EA3359; }
+        .tilde { color: #C8E7F9; }
+        .dollar-sign { color: #EA3359; }
+
+        /* Dropdown styling */
+        .dropdown {
+            display: none;
+            margin-top: 10px;
+            padding: 0;
+            width: 100%;
+            max-width: 600px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr); /* صفين */
+            gap: 15px; /* مسافة بين العناصر */
+        }
+
+        .dropdown-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 1em;
+            text-align: center; /* لضبط النص */
+        }
+
+        .dropdown-item img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+            pointer-events: none; /* منع النقر والسحب */
+            user-select: none; /* منع التحديد */
+        }
+
+        .dropdown-item span {
+            font-size: 0.9em;
+            line-height: 1.4;
+        }
+
+        .whoweare {
+            margin-top: 20px;
+            cursor: pointer;
+            color: #9EFCE3;
+            text-decoration: underline;
+        }
+
+        .electric-icon {
+            width: 80px;
+            height: 80px;
+            margin-top: 0;
+            margin-bottom: 20px;
+            pointer-events: none; /* منع النقر */
+            user-select: none; /* منع التحديد */
+        }
+    </style>
+   <script type="ce3e47cc5acd435e7a776c3b-text/javascript">
+    function shuffleDropdown() {
+        const dropdown = document.querySelector('.dropdown');
+        const items = Array.from(dropdown.children); 
+        const shuffledItems = items.sort(() => Math.random() - 0.5);
+        dropdown.innerHTML = ''; 
+        shuffledItems.forEach(item => dropdown.appendChild(item)); 
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        shuffleDropdown();
+    });
+
+    // منع النقر بزر الفأرة الأيمن
+    document.addEventListener('contextmenu', function(e) {
+        e.preventDefault();
+    });
+
+    // منع اختصارات لوحة المفاتيح
+    document.addEventListener('keydown', function(event) {
+        if (event.key === 'F12' || (event.ctrlKey && event.shiftKey && event.key === 'I') || 
+            (event.ctrlKey && event.shiftKey && event.key === 'J') || (event.ctrlKey && event.key === 'U')) {
+            event.preventDefault();
+        }
+    });
+
+    // تحذير عند فتح أدوات المطور
+    const element = new Image();
+    Object.defineProperty(element, 'id', {
+        get: function() {
+            alert('تم اكتشاف فتح أدوات المطور! الرجاء إغلاقها.');
+        }
+    });
+    console.log(element);
+
+    // إظهار القائمة المنسدلة
+    function toggleDropdown() {
+        const dropdown = document.querySelector('.dropdown');
+        dropdown.style.display = dropdown.style.display === 'none' || dropdown.style.display === '' ? 'grid' : 'none';
+    }
+</script>
+
+</head>
+<body>
+    <img src="https://EnjoyTeam.app/enjoyy.png" alt="Electric Icon" class="electric-icon" draggable="false">
+
+    <div class="terminal">
+        <div class="header">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+        </div>
+        <div class="content">
+            <p><span class="enjoy">Enjoy@with</span><span class="colon">:</span><span class="tilde">~</span><span class="dollar-sign">$ EnjoyTeam.app</span></p>
+            <p class="whoweare" onclick="if (!window.__cfRLUnblockHandlers) return false; toggleDropdown()" data-cf-modified-ce3e47cc5acd435e7a776c3b-=""><span class="tilde">~</span><span class="dollar-sign">$ </span>whoami >></p>
+            <div class="dropdown">
+                <div class="dropdown-item">
+                    <img src="https://EnjoyTeam.app/0.png" alt="Dev 0" draggable="false">
+                    <span>Ameer</span>
+                </div>
+                <div class="dropdown-item">
+                    <img src="https://EnjoyTeam.app/1.jpeg" alt="Dev 1" draggable="false">
+                    <span>Haitham</span>
+                </div>
+                <div class="dropdown-item">
+                    <img src="https://EnjoyTeam.app/2.jpeg" alt="Dev 2" draggable="false">
+                    <span>Ahmad</span>
+                </div>
+                <div class="dropdown-item">
+                    <img src="https://EnjoyTeam.app/3.jpeg" alt="Dev 3" draggable="false">
+                    <span>Haidar</span>
+                </div>
+                    <div class="dropdown-item">
+                    <img src="https://EnjoyTeam.app/9.jpeg" alt="Dev 10" draggable="false">
+                    <span>Mosab</span>
+                </div>
+                 <div class="dropdown-item">
+                    <img src="https://EnjoyTeam.app/8.jpeg" alt="Dev 11" draggable="false">
+                    <span>iSaQer</span>
+                </div>
+                <div class="dropdown-item">
+                    <img src="https://EnjoyTeam.app/4.PNG" alt="Dev 4" draggable="false">
+                    <span>Arico</span>
+                </div>
+                <div class="dropdown-item">
+                    <img src="https://EnjoyTeam.app/5.jpg" alt="Dev 5" draggable="false">
+                    <span>Emad</span>
+                </div>
+                <div class="dropdown-item">
+                    <img src="https://EnjoyTeam.app/6.png" alt="Dev 6" draggable="false">
+                    <span>JKO</span>
+                </div>
+                <div class="dropdown-item">
+                    <img src="https://EnjoyTeam.app/7.jpeg" alt="Dev 7" draggable="false">
+                    <span>SBF</span>
+                </div>
+                  <div class="dropdown-item">
+                    <img src="https://EnjoyTeam.app/10.jpg" alt="Dev 8" draggable="false">
+                    <span>ZKTR</span>
+                </div>
+                 <div class="dropdown-item">
+                    <img src="https://EnjoyTeam.app/10.jpeg" alt="Dev 9" draggable="false">
+                    <span>Malek</span>
+                </div>
+            </div>
+        </div>
+    </div>
+<script src="/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js" data-cf-settings="ce3e47cc5acd435e7a776c3b-|49" defer></script><script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"rayId":"8ec67a793bdecfd5","version":"2024.10.5","r":1,"token":"d182b3f0c3b14328ab80661a3574b1c4","serverTiming":{"name":{"cfExtPri":true,"cfL4":true,"cfSpeedBrain":true,"cfCacheStatus":true}}}' crossorigin="anonymous"></script>
+</body>
+</html>
